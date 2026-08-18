@@ -1,0 +1,32 @@
+{
+    "1":{
+        "name":"Root",
+        "type":"Folder",
+        "parent":null,
+        "children":[2,3]
+    },
+    "2":{
+        "name":"Main",
+        "type":"Folder",
+        "parentId":1,
+        "children":[]
+    },
+    "3":{
+      "name":"Src",
+      "type":"Folder",
+      "parentId":1,
+      "children":[4,5]
+    },
+    "4":{
+        "name":"App.js",
+        "type":"File",
+        "parentId":3,
+        "children":[]
+    },
+    "5":{
+        "name":"package.json",
+        "type":"File",
+        "parentId":3,
+        "children":[]
+    }
+}
