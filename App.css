@@ -1,0 +1,1025 @@
+:root {
+  --background-color-light: #ffffff;
+  --text-color-light: #000000;
+  --background-color-dark: #333333;
+  --text-color-dark: #ffffff;
+}
+
+
+
+.input{
+  height:30px;
+  width:100%
+}
+
+.container{
+  display: flex;
+  width: 400px;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+}
+
+ul{
+ list-style-type: none;
+ padding:0;
+}
+
+.product-list{
+  width:400px;
+  overflow-y: scroll;
+  border:1px solid black;
+  height:100px;
+  position: absolute;
+  top:50%;
+}
+
+.active{
+  border:1px solid black;
+}
+
+.image{
+  height:400px;
+  width:400px;
+}
+
+.image-container{
+  display:flex;
+}
+.main-container{
+  display: flex;
+  justify-content: center;
+    align-items: center;
+}
+
+.movable-button{
+  height:30px;
+  width:40px;
+}
+
+.gridContainer{
+  width:400px;
+  height:400px;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap:5px;
+}
+
+.gridButton{
+  width:100px;
+  height: 100px;
+  border:1px solid black;
+}
+
+.gridActive{
+  background-color: blue;
+}
+
+.jiraContainer{
+  display: flex;
+  justify-content: space-between;
+}
+
+.taskContainer{
+  border: 1px solid black;
+  padding:20px;
+  display: flex;
+  flex-direction: column;
+  gap:5px;
+}
+
+.taskItem{
+  border:1px solid grey;
+  padding:4px;
+}
+
+.commentsContainer{
+  display:flex;
+  gap:5px;
+}
+
+.nestedComments{
+  border-left: 1px solid black;
+  margin-top: 0.5px;
+  padding-left: 1rem;
+}
+
+.chart-container{
+  width:400px;
+  height:400px;
+  margin-left:5rem;
+  margin-top:5rem;
+  position: relative;
+  padding:10px;
+}
+
+.chart{
+  width:100%;
+  height: 100%;
+  border:1px solid black;
+  border-top-width:0;
+  border-right-width:0;
+  display:flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.y-axis{
+  position: absolute;
+  top:50%;
+  left:0;
+  transform: translateX(-50%) translateY(-50%) rotate(-90deg);
+}
+
+.x-axis{
+  position: absolute;
+  left:50%;
+}
+
+.bar{
+  position: relative;
+}
+
+.tooltip{
+  display: none;
+  position:absolute;
+  top:0;
+  right:50%;
+  transform: translate(50%,-120%);
+  width: max-content;
+  background-color: grey;
+}
+
+.bar:hover .tooltip{
+display: block;
+}
+
+.pointer{
+  width:30px;
+  height:30px;
+  background-color: red;
+  border-radius: 50%;
+  border: 1px solid red;
+  position: absolute;
+}
+
+.memoryContainer{
+  display: grid;
+  grid-template-columns: repeat(6,1fr);
+  grid-template-rows: repeat(6,1fr);
+  width: 400px;
+  height: 400px;
+}
+
+.memoryItem{
+  width:30px;
+  height:30px;
+  border:1px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+
+.memoryContainermemoryContainer{
+   height:500px;
+   width:500px;
+   display:grid;
+   gap:10px;
+}
+
+.grid-button{
+  width:150px;
+  height:150px;
+  border:1px solid black;
+}
+
+.grid-active{
+  background-color: blue;
+}
+
+.board{
+  display:grid;
+  gap:5px;
+}
+
+.cell{
+  width:40px;
+  height:40px;
+  border:1px solid black;
+
+}
+
+.checkbox{
+  width:300px;
+  height:50px;
+  border:1px solid black;
+  border-radius: 12px;
+  position:relative;
+  overflow: hidden;
+}
+
+.progress-container {
+  position: relative;
+  height: 20px;
+  width: 300px;
+  border: 1px solid grey;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.progress-bar{
+  width:100%;
+  height: 100%;
+  position: absolute;
+  background-color: green;
+}
+
+.light-container{
+  width:100px;
+  height:400px;
+  border:1px solid black;
+  border-radius:12px;
+  display: flex;
+  gap:10px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.light{
+  width:50px;
+  height:50px;
+  border: 1px solid black;
+  border-radius: 50%;
+  background-color: grey;
+}
+
+.explorer-container{
+  border-left:1px solid black;
+  margin-left :5px;
+}
+
+.explorer{
+  margin-left: 5px;
+}
+
+.jira-container{
+  display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.item-container{
+  border: 1px solid black;
+    padding: 15px;
+}
+.item{
+  border: 1px solid black;
+    padding: 5px;
+}
+
+.toast-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 550px;
+}
+
+.toast-notification{
+  border: 1px solid black;
+    width: 200px;
+    height: 30px;
+    padding: 10px;
+    border-radius: 10px;
+    animation: slider 1s 1;
+    margin-top: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+@keyframes slider{
+0%{
+transform: translateX(100%);
+}
+100%{
+  transform: translateX(0);
+}
+}
+
+.Success{
+  background-color: green;
+}
+
+.Info{
+  background-color: lightblue;
+}
+
+.Warning{
+  background-color: yellow;
+}
+
+.Error{
+  background-color: red;
+}
+
+.carousal-container{
+  height:200px;
+  width:400px;
+  display:flex;
+  justify-content: center;
+
+}
+
+.carousal-image{
+  object-fit: contain;
+  width:400px;
+
+}
+
+.carousal-button{
+  height: 20px;
+    width: 20px;
+}
+
+.infinite-container{
+  display:flex;
+  flex-direction: column;
+  gap:20px;
+  width:200px;
+}
+
+.multi-input{
+ height: 20px;
+ padding:5px;
+ border: none;
+ outline: none;
+ font-size:18px;
+}
+
+.list-container{
+  max-height: 300px;
+  border: 1px solid black;
+  width: 50%;
+  overflow-y: scroll;
+  
+  position: absolute;
+  margin: 0;
+}
+
+.list-item{
+  display: flex;
+    /* justify-content: center; */
+    padding: 15px;
+    align-items: center;
+    gap: 10px;
+    border-bottom: 1px solid black;
+}
+
+.list-container list-item:last-child{
+  border-bottom: none;
+}
+
+.multiInputContainer{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  border: 1px solid black;
+  border-radius: 12px;
+  padding:5px;
+  gap:5px;
+}
+
+.pills{
+  height:20px;
+  display: flex;
+  align-items: center;
+  background-color: aquamarine;
+  gap:5px;
+  padding:5px;
+  border-radius: 4px;
+}
+
+.list-item:hover{
+  background-color: beige;
+}
+
+.list-active{
+  background-color: beige;
+}
+
+.gold{
+  color:yellow;
+}
+
+
+.steppers-container{
+  display: flex;
+  align-items: center;
+  gap:2.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.steps{
+  height: 2.5rem;
+    width: 2.5rem;
+    border-radius: 50%;
+    border: 1px solid black;
+    background-color: grey;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.line{
+  position: absolute;
+  border:1px solid black;
+  height:2.5rem;
+  width: 2px;
+  top:2.5rem;
+  background-color: grey;
+}
+
+.polling-container{
+  display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    /* justify-content: center; */
+    align-items: center;
+    border: 1px solid black;
+    padding: 10px;
+}
+
+.polling-item{
+  border: 1px solid black;
+    width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-container{
+  display:grid;
+  grid-template-columns: repeat(6,1fr);
+  gap:5px;
+  width: 300px;
+
+}
+
+.card{
+  width:30px;
+  height:30px;
+  border:1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.autocomplist{
+  max-height: 300px;
+  position: absolute;
+  overflow-y: scroll;
+  margin:0;
+  border:1px solid black;
+  width: 100%;
+}
+
+.chessBoardContainer{
+  background-color: aqua;
+  padding: 10px;
+}
+
+.white{
+  height:100px;
+  width:100px;
+  background-color:white;
+}
+
+.black{
+  height: 100px;
+  width:100px;
+  background-color:black;
+}
+.chess-row{
+  display:flex;
+  justify-content: center;
+}
+
+.chess-row-reverse{
+  display: flex;
+  justify-content: center;
+  flex-direction: row-reverse;
+}
+
+.products {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.product {
+  border: 1px solid #ddd;
+  padding: 1rem;
+  border-radius: 4px;
+}
+
+button {
+  margin-left: 5px;
+}
+
+
+body{
+  background-color: var(--background-color-light);
+  color:var(--text-color-light)
+}
+
+body.dark{
+  background-color: var(--background-color-dark);
+  color:var(--text-color-light)
+}
+
+
+.switch{
+  position: relative;
+  display: inline-block;
+  height:2rem;
+  width:4rem;
+  background-color: grey;
+  border-radius: 32px;
+}
+
+.switch::after{
+  content:'';
+  position: absolute;
+  height:1.8rem;
+  width:1.8rem;
+  background-color: #ffffff;
+  border-radius: 50%;
+  top:1px;
+  left:1px;
+  transition: all 0.3s linear;
+}
+
+input[type='checkbox']:checked + .switch::after{
+  translate: 2rem;
+
+}
+
+input[type='checkbox']:checked + .switch{
+ background-color: blue;
+
+}
+
+/* input[type='checkbox']{
+  display: none;
+} */
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(var(--cols, 10), 35px);
+  grid-template-rows: repeat(var(--rows, 10), 35px);
+  gap: 2px;
+  user-select: none;
+}
+
+.box {
+  width: 35px;
+  height: 35px;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.selected {
+  background-color: lightblue;
+}
+
+.custom-select-wrapper {
+  position: relative;
+  width: 250px;
+  font-family: sans-serif;
+}
+
+.custom-select-control {
+  border: 1px solid #ccc;
+  padding: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  cursor: pointer;
+  min-height: 40px;
+  background: white;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  flex: 1;
+}
+
+.tag {
+  background: #e2e2e2;
+  padding: 2px 8px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  font-size: 0.85rem;
+}
+
+.tag button {
+  border: none;
+  background: none;
+  margin-left: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.placeholder {
+  color: #888;
+}
+
+.dropdown-arrow {
+  margin-left: auto;
+}
+
+.custom-select-control {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  border: 1px solid #ccc;
+  min-height: 40px;
+  padding: 4px;
+  background-color: white;
+  cursor: text;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  flex: 1;
+  align-items: center;
+}
+
+.tag {
+  background: #e2e2e2;
+  padding: 2px 6px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  font-size: 0.85rem;
+}
+
+.tag button {
+  background: none;
+  border: none;
+  margin-left: 4px;
+  cursor: pointer;
+}
+
+.custom-select-input {
+  border: none;
+  outline: none;
+  flex: 1;
+  min-width: 80px;
+  font-size: 0.9rem;
+  padding: 4px;
+}
+
+.custom-select-options {
+  position: absolute;
+  background: white;
+  border: 1px solid #ccc;
+  width: 100%;
+  max-height: 150px;
+  overflow-y: auto;
+  list-style: none;
+  padding: 0;
+  margin-top: 2px;
+  z-index: 1000;
+}
+
+.custom-select-options li {
+  padding: 8px;
+  cursor: pointer;
+}
+
+.custom-select-options li:hover {
+  background-color: #f0f0f0;
+}
+
+.no-options {
+  padding: 8px;
+  color: #888;
+  font-style: italic;
+}
+
+.dropdown-arrow {
+  margin-left: auto;
+  font-size: 0.9rem;
+  padding: 0 4px;
+}
+
+
+
+.cinema-container {
+  text-align: center;
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+h2 {
+  margin-bottom: 15px;
+}
+
+.screen {
+  width: 60%;
+  margin: 10px auto 25px;
+  padding: 10px;
+  border-radius: 6px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: #333;
+  background: linear-gradient(to bottom, #ffffff, #cfcfcf, #999);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Seats layout */
+.seats-grid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.seat-row {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+}
+
+/* Individual seat */
+.seat {
+  width: 35px;
+  height: 35px;
+  background: #e0e0e0;
+  border: 2px solid #aaa;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.seat:hover {
+  background: #d6d6d6;
+}
+
+/* Seat states */
+.seat.booked {
+  background: #555;
+  color: white;
+  cursor: not-allowed;
+}
+
+.seat.selected {
+  color: white;
+}
+
+/* Aisle spacing */
+.aisle {
+  width: 25px;
+}
+
+/* Legend */
+.legend {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 14px;
+}
+
+.legend-color {
+  width: 16px;
+  height: 16px;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+}
+
+/* Summary section */
+.summary {
+  margin-top: 20px;
+}
+
+.summary button {
+  margin-top: 10px;
+  padding: 8px 16px;
+  border: none;
+  background: #28a745;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.summary button:hover {
+  background: #218838;
+}
+
+
+
+
+.container {
+  text-align: center;
+  padding: 20px;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(10, 60px);
+  grid-template-rows: repeat(10, 60px);
+  gap: 2px;
+  margin: 20px auto;
+  background: #333;
+}
+
+.cell {
+  background: #fff;
+  border: 1px solid #ccc;
+  position: relative;
+  padding: 4px;
+}
+
+.number {
+  font-size: 12px;
+}
+
+.player {
+  position: absolute;
+  bottom: 4px;
+  right: 4px;
+  font-size: 20px;
+}
+
+.icon {
+  position: absolute;
+  top: 18px;
+  left: 4px;
+  font-size: 18px;
+}
+
+/* Snake & Ladder styling */
+.snake-start {
+  background-color: #ffe6e6;
+}
+
+.snake-end {
+  background-color: #ffcccc;
+}
+
+.ladder-start {
+  background-color: #e6ffe6;
+}
+
+.ladder-end {
+  background-color: #ccffcc;
+}
+
+.controls {
+  margin-top: 20px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+
+.signals {
+  display: flex;
+  gap: 20px;
+}
+
+.traffic-light {
+  width: 60px;
+  background: #222;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.light {
+  width: 40px;
+  height: 40px;
+  margin: 10px auto;
+  border-radius: 50%;
+  opacity: 0.3;
+}
+
+.light.on {
+  opacity: 1;
+}
+
+.red {
+  background: red;
+}
+
+.yellow {
+  background: yellow;
+}
+
+.green {
+  background: green;
+}
+
+
+.circleContainer{
+  width:400px;
+  height:400px;
+  border:1px solid black;
+  position:relative
+}
+
+.grid-wrapper{
+  display:flex;
+  flex-direction: column;
+  gap:10px;
+  align-items: center;
+  justify-content: center;
+}
+
+.grid-wrapper >div{
+  display: flex;
+  gap:10px;
+
+}
+.grid-wrapper >div:nth-child(even){
+  flex-direction: row-reverse;
+
+}
+
+.grid-wrapper > div >div{
+  width:50px;
+  height:50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid black;
+}
+
+
+.app {
+  display: flex;
+  height: 100vh;
+}
+
+.sidebar {
+  width: 250px;
+  border-right: 1px solid #ddd;
+}
+
+.sidebar div {
+  padding: 15px;
+  cursor: pointer;
+}
+
+.active {
+  background: #ececec;
+}
+
+.chatWindow {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.messages {
+  flex: 1;
+  overflow-y: auto;
+  padding: 20px;
+}
+
+.inputBox {
+  display: flex;
+  padding: 20px;
+}
+
+.inputBox input {
+  flex: 1;
+  margin-right: 10px;
+}
