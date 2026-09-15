@@ -1,0 +1,26 @@
+{
+    "1":{
+        "id":1,
+        "parentId":null,
+        "value":"how are you doing",
+        "children":[2,3]
+    },
+    "2":{
+        "id":2,
+        "parentId":1,
+        "value":"fine thanks",
+        "children":[4]
+    },
+    "3":{
+        "id":3,
+        "parentId":1,
+        "value":"doin good",
+        "children":[]
+    },
+    "4":{
+        "id":4,
+        "parentId":2,
+        "value": "no way",
+        "children":[]
+    }
+}
